@@ -1,0 +1,5 @@
+<map id="cmd_glitch_configure_arm_and_wait" name="cmd_glitch_configure_arm_and_wait">
+<area shape="rect" id="node1" title="Command handler for setting up the amount of wait and glitch cycles." alt="" coords="291,5,452,47"/>
+<area shape="rect" id="node2" href="$pico__trigger__uart_8c.html#a333d7b2f2b4af6b2c46097ae12eb6d55" title="Read and process a single character command." alt="" coords="108,13,243,39"/>
+<area shape="rect" id="node3" href="$pico__trigger__uart_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Set up everything and enter command handler loop." alt="" coords="5,13,60,39"/>
+</map>

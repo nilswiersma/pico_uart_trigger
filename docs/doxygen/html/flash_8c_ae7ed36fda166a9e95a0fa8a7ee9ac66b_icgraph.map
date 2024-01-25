@@ -1,0 +1,5 @@
+<map id="cmd_write_settings_flash" name="cmd_write_settings_flash">
+<area shape="rect" id="node1" title=" " alt="" coords="291,5,440,47"/>
+<area shape="rect" id="node2" href="$pico__trigger__uart_8c.html#a333d7b2f2b4af6b2c46097ae12eb6d55" title="Read and process a single character command." alt="" coords="108,13,243,39"/>
+<area shape="rect" id="node3" href="$pico__trigger__uart_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Set up everything and enter command handler loop." alt="" coords="5,13,60,39"/>
+</map>

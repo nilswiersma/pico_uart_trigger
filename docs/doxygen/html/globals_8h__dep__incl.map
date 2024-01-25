@@ -1,0 +1,8 @@
+<map id="globals.h" name="globals.h">
+<area shape="rect" id="node1" title=" " alt="" coords="194,5,275,32"/>
+<area shape="rect" id="node2" href="$core1_8c.html" title=" " alt="" coords="5,80,75,107"/>
+<area shape="rect" id="node3" href="$display_8c.html" title=" " alt="" coords="99,80,178,107"/>
+<area shape="rect" id="node4" href="$flash_8c.html" title=" " alt="" coords="202,80,267,107"/>
+<area shape="rect" id="node5" href="$pico__trigger__uart_8c.html" title=" " alt="" coords="291,80,434,107"/>
+<area shape="rect" id="node6" href="$settings_8c.html" title=" " alt="" coords="459,80,544,107"/>
+</map>

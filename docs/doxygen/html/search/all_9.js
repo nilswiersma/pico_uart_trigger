@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['packet_5fqueue_0',['packet_queue',['../core1_8c.html#aad1a1cf1e43def74247b81900c0c14ce',1,'packet_queue():&#160;core1.c'],['../globals_8h.html#aad1a1cf1e43def74247b81900c0c14ce',1,'packet_queue():&#160;core1.c']]],
+  ['pat_5flen_1',['pat_len',['../structsettings__t.html#ab0b3f9ceff2187579739e3421b0fc6b8',1,'settings_t']]],
+  ['pattern_2',['pattern',['../structsettings__t.html#ac4c658e515ba4efd4d51465eea036d86',1,'settings_t']]],
+  ['pico_5ftrigger_5fuart_2ec_3',['pico_trigger_uart.c',['../pico__trigger__uart_8c.html',1,'']]],
+  ['pin_5ftrigger_5fout_4',['pin_trigger_out',['../structsettings__t.html#a61ef61a2d96b38b08bde78f6c169e564',1,'settings_t']]],
+  ['pins_2eh_5',['pins.h',['../pins_8h.html',1,'']]],
+  ['pio_6',['pio',['../globals_8h.html#ac79a43604cef3e167780e935276174d0',1,'pio():&#160;pico_trigger_uart.c'],['../pico__trigger__uart_8c.html#ac79a43604cef3e167780e935276174d0',1,'pio():&#160;pico_trigger_uart.c']]],
+  ['pio_5fdebug_5fout_5fpin_7',['PIO_DEBUG_OUT_PIN',['../pins_8h.html#abd81947d79fc98d6ef1e42753baa8ee8',1,'pins.h']]],
+  ['pio_5finterrupt_5fhandler_8',['pio_interrupt_handler',['../pico__trigger__uart_8c.html#a82a27ca3408f76dee4c68eefb81b2015',1,'pico_trigger_uart.c']]],
+  ['pio_5foffset_9',['pio_offset',['../globals_8h.html#a819941891ee4efc6874b5b90fad7202f',1,'pio_offset():&#160;pico_trigger_uart.c'],['../pico__trigger__uart_8c.html#a819941891ee4efc6874b5b90fad7202f',1,'pio_offset():&#160;pico_trigger_uart.c']]],
+  ['pio_5fsm_10',['pio_sm',['../globals_8h.html#a9b4b8196154418c89b2e42081572a370',1,'pio_sm():&#160;pico_trigger_uart.c'],['../pico__trigger__uart_8c.html#a9b4b8196154418c89b2e42081572a370',1,'pio_sm():&#160;pico_trigger_uart.c']]],
+  ['pio_5ftrigger_5fin_5fpin_11',['PIO_TRIGGER_IN_PIN',['../pins_8h.html#a2e904537d52a1dc543067b454073bc75',1,'pins.h']]],
+  ['pio_5ftrigger_5fout_5fpin_12',['PIO_TRIGGER_OUT_PIN',['../pins_8h.html#adfb996b54e397fd876d97823bd97f665',1,'pins.h']]],
+  ['power1_5fpin_13',['POWER1_PIN',['../pins_8h.html#ad9ce3b59404560afbda89d4b78155e57',1,'pins.h']]],
+  ['power2_5fpin_14',['POWER2_PIN',['../pins_8h.html#a9f2b0bd172742ff54f40acfb6ebce769',1,'pins.h']]],
+  ['power_5fmask_15',['POWER_MASK',['../pins_8h.html#a6a25bcbdf6de1382833ae3a84a860c33',1,'pins.h']]],
+  ['print_5fcommands_16',['print_commands',['../display_8c.html#a86e8918c827394abbaed9d0dcd31e5bb',1,'print_commands(void):&#160;display.c'],['../display_8h.html#a86e8918c827394abbaed9d0dcd31e5bb',1,'print_commands(void):&#160;display.c']]],
+  ['print_5fsettings_17',['print_settings',['../display_8c.html#a04254731d52e6d160da3b727d9ea6b6a',1,'print_settings(void):&#160;display.c'],['../display_8h.html#a04254731d52e6d160da3b727d9ea6b6a',1,'print_settings(void):&#160;display.c']]],
+  ['print_5fstate_18',['print_state',['../display_8c.html#a03da7a935d9ac9d4da885c499d4cecb5',1,'print_state(void):&#160;display.c'],['../display_8h.html#a03da7a935d9ac9d4da885c499d4cecb5',1,'print_state(void):&#160;display.c']]]
+];

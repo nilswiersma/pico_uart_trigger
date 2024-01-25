@@ -30,7 +30,12 @@ uint pio_sm;
 uint pio_offset;
 
 /**
- * `packet_queue` gets filled from core1.
+ * @brief Send `len` bytes from the `packet_queue` over USB serial.
+ * 
+ * `packet_queue` gets filled by core1 (see core1.c). Use this function to empty `packet_queue`
+ * to the host PC.
+ * 
+ * @param len 
  */
 void queue_dump(uint len) {
   char ch;
@@ -43,6 +48,10 @@ void queue_dump(uint len) {
   }
 }
 
+/**
+ * @brief Command handler for `d`, which sends stored bytes over USB serial.
+ * 
+ */
 void cmd_dump(void) {
   uint len = queue_get_level(&packet_queue);
   if (len) {
@@ -51,10 +60,23 @@ void cmd_dump(void) {
   }
 }
 
+/**
+ * @brief Command handler to toggle sending bytes over USB serial as they are received.
+ * 
+ */
+
 void cmd_stream_toggle(void) {
   settings.stream_toggle = !settings.stream_toggle;
 }
 
+
+/**
+ * @brief Command handler to set the baudrate for the UART that is being sniffed.
+ * 
+ * This expects a number to be used as baudrate terminated by a null-byte, CTRL-D,
+ * \\r or \\n. CTRL-C cancels the input.
+ * 
+ */
 void cmd_set_baud(void) {
   int i;
   uint baudrate;
@@ -80,6 +102,14 @@ void cmd_set_baud(void) {
   }
 }
 
+/**
+ * @brief Command handler for configuring the UART pattern to trigger on.
+ *
+ * This expects a number as length, terminated by a null-byte, CTRL-D, \\r 
+ * or \\n (or CTRL-C to cancel), followed by that many (raw) bytes to be used
+ * as the pattern to trigger on.
+ * 
+ */
 void cmd_set_pat(void) {
   int i;
   uint pat_len;
@@ -123,13 +153,34 @@ void cmd_set_pat(void) {
   }
 }
 
-// Signals back after armed
+/**
+ * @brief Handler for when the PIO SM finishes.
+ * 
+ * This RAM function is used as handler for when the PIO SM
+ * that is used to generate a trigger pulse to an external device
+ * (e.g. a ChipSHOUTER) finishes. It sends a single 'y' char over the 
+ * USB serial to indicate it is done, and clears the interrupt so that
+ * the PIO SM can continue with the next attempt.
+ */
 void __time_critical_func(pio_interrupt_handler)() {
     putchar('y');
     // Clear the PIO interrupt status
     pio_interrupt_clear(pio, 0);
 }
 
+/**
+ * @brief Command handler for setting up the amount of wait and glitch cycles.
+ *
+ * Expects two numbers terminated by a null-byte, CTRL-D, \\r or \\n (or CTRL-C to 
+ * cancel) each which will be used as the amount of clock cycles for the glitch 
+ * delay and glitch duration. It is not translated to seconds, so check the configured
+ * clock speed (250MHz at time of writing).
+ *
+ * Once the two numbers are received, the PIO SM used for generating this signal is 
+ * started, which then in "armed" state, which means it is waiting for an edge on 
+ * PIO_TRIGGER_IN_PIN (see pins.h).
+ * 
+ */
 void cmd_glitch_configure_arm_and_wait(void) {
   int i;
   char readbuf[128], c;
@@ -187,6 +238,11 @@ void cmd_glitch_configure_arm_and_wait(void) {
   // pio_interrupt_handler will signal back when trigger has ocurred.
 }
 
+/**
+ * @brief Read and process a single character command.
+ * 
+ */
+
 void cmd_get_process() {
   int cmd = 0, ret = 0;
   // Check for commands
@@ -243,6 +299,11 @@ void cmd_get_process() {
 
 }
 
+/**
+ * @brief Set up everything and enter command handler loop.
+ * 
+ * @return int 
+ */
 int main(void)
 {
   int ret;

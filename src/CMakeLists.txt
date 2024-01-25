@@ -37,7 +37,7 @@ pico_add_extra_outputs(pico_fi_control)
 
 find_package( Doxygen )
 if ( DOXYGEN_FOUND )
-  set( DOXYGEN_OUTPUT_DIRECTORY docs )
+  set( DOXYGEN_OUTPUT_DIRECTORY ../docs/doxygen/ )
   set( DOXYGEN_COLLABORATION_GRAPH YES )
   set( DOXYGEN_EXTRACT_ALL YES )
   set( DOXYGEN_CLASS_DIAGRAMS YES )

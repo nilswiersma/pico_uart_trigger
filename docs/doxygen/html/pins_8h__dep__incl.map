@@ -1,0 +1,6 @@
+<map id="pins.h" name="pins.h">
+<area shape="rect" id="node1" title=" " alt="" coords="108,5,169,32"/>
+<area shape="rect" id="node2" href="$core1_8c.html" title=" " alt="" coords="5,80,75,107"/>
+<area shape="rect" id="node3" href="$display_8c.html" title=" " alt="" coords="99,80,178,107"/>
+<area shape="rect" id="node4" href="$pico__trigger__uart_8c.html" title=" " alt="" coords="202,80,345,107"/>
+</map>
